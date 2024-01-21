@@ -1,0 +1,50 @@
+p{
+  font-family: Lexend;
+  display: inline-block;
+  background-color: yellow;
+}
+
+body, html {
+  height: 100%;
+}
+body{
+  background-image: url('Images/BG.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(213, 178, 48);
+}
+* {
+  box-sizing: border-box;
+}
+
+.title{
+  font-family: Lexend;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.project-image{
+  width: 350px;
+  border: 5px solid;
+  border-color: black;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  transition: width .15s;
+}
+.project-image:hover{
+  width: 355px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  box-shadow: 10, 10, 1, rgba(0, 0, 0, .9);
+}
+.project-image:active{
+  width: 340px;
+}
+#hiddenContent{
+  font-size: large;
+}
