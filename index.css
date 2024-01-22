@@ -33,11 +33,13 @@ body{
   height: 350px;
   line-height: 350px;
 }
+.project-image, .project-image-description{
+  border-radius: 30px;
+  border-width: 20px;
+}
 .project-image{
   margin-right: 2%;
   background-size: cover;
-  border-radius: 30px;
-  border-width: 20px;
   border-color: black;
   box-shadow: 10vmin,10vmin,0,rgba(0, 0, 0, 0.795);
   transition: margin-right 1s ease-in-out;
@@ -45,23 +47,33 @@ body{
 .project-image:hover{
   margin-right: 30%;
 }
+.project-image-description{
+  overflow: hidden;
+  width: 650px;
+  height: 350px;
+  background-color: aliceblue;
+  position: absolute;
+  z-index: -1;
+  transform: translate(300px, 0px);
+}
+
 .project-image:nth-child(1){
   background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg');
 }
 .project-image:nth-child(2){
-  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg');
+  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen03.jpg');
 }
 .project-image:nth-child(3){
-  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg');
+  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen04.jpg');
 }
 .project-image:nth-child(4){
-  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg');
+  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen05.jpg');
 }
 .project-image:nth-child(5){
-  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg');
+  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen06.png');
 }
 .project-image:nth-child(6){
-  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg');
+  background-image: url('Images/2IGP13_E_Surmont_Sebastien_exam_screen07.png');
 }
 
 .about-me-description{
