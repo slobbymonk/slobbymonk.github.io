@@ -34,12 +34,11 @@ p{
   position: absolute;
   border-radius: var(--cards-corner-rounding);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.159);
-  transition: transform .15s;
   overflow: hidden;
   border-width: 3px;
   border-color: black;
   border-style: dashed;
-  transition: border-width 1s;
+  transition: border-width 1s, transform .25s;
 }
 .project-cards-text{
   background-color: rgba(0, 0, 0, 0.786);
