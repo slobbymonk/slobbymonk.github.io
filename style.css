@@ -2,7 +2,7 @@
   --cards-corner-rounding: 10px;
 }
 body{
-  background-color: antiquewhite;
+  background-color: rgb(250, 244, 215);
 }
 p{
   font-family: Lexend;
@@ -32,7 +32,7 @@ p{
 .project-cards{
   position: absolute;
   border-radius: var(--cards-corner-rounding);
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.159);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.159);
   transition: transform .15s;
   overflow: hidden;
 }
@@ -129,7 +129,7 @@ p{
   top: 65%;
 }
 .project-cards:nth-child(9){
-  background-image: url("Images/2IGP13_E_Surmont_Sebastien_exam_screen01.jpg");
+  background-image: url("Images/ragdollgolf.png");
   background-size: cover;
   background-color: rgb(10, 87, 241);
   width: 400px;
