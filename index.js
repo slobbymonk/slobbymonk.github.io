@@ -1,34 +1,53 @@
 const gallery = document.getElementById("gallery");
-let canPan = false;
+let isMoving = false;
 
+let currentPanX = 0;
+let currentPanY = 0;
 
-document.body.onmousedown = function() { 
-      canPan = true;
-    }
-document.body.onmouseup = function() {
-      canPan = false;
-}
+let mouseX,
+      mouseY;
 
 window.onmousemove = e => {
-  const mouseX = e.clientX,
-        mouseY = e.clientY;
+  mouseX = e.clientX,
+  mouseY = e.clientY;
+};
+// document.addEventListener('mouseleave', () => {
+//       isMoving = false;
+// });
+// document.addEventListener('mouseenter', () => {
+//       isMoving = true;
+// });
+document.addEventListener('mousedown', () => {
+      isMoving = true;
+});
+document.addEventListener('mouseup', () => {
+      isMoving = false;
+});
 
-  const xDecimal = mouseX / window.innerWidth,
-        yDecimal = mouseY / window.innerHeight;
-  
+function update(){
+      if(isMoving){
+            const xDecimal = mouseX / window.innerWidth,
+            yDecimal = mouseY / window.innerHeight;
 
-  const panX = gallery.offsetWidth * xDecimal * -1,
-        panY = gallery.offsetHeight * yDecimal * -1;
-    
-  if(canPan){
-      gallery.animate({
-            transform: `translate(${panX}px, ${panY}px)`
-      }, {
-            duration: 4000,
-            fill: "forwards",
-            easing: "ease"
-      })
-  }
-  
+            // const willMove = xDecimal <= 0.05 || xDecimal >= 0.95 || yDecimal <= 0.05 || yDecimal >= 0.95;
+
+            // if (!willMove) {
+            //       window.requestAnimationFrame(update);
+            //   return; // Do not update if outside the specified range
+            // }
+
+            const targetPanX = gallery.offsetWidth * xDecimal * -1;
+            const targetPanY = gallery.offsetHeight * yDecimal * -1;
+
+            const easeFactor = 0.01; // Adjust the ease factor for the desired transition speed
+
+            currentPanX += (targetPanX - currentPanX) * easeFactor;
+            currentPanY += (targetPanY - currentPanY) * easeFactor;
+
+            gallery.style.transform = `translate(${currentPanX}px, ${currentPanY}px)`;
+
+
+      }
+      window.requestAnimationFrame(update);
 }
-
+window.requestAnimationFrame(update);
