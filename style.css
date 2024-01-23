@@ -3,6 +3,7 @@
 }
 body{
   background-color: rgb(250, 244, 215);
+  overflow: hidden;
 }
 p{
   font-family: Lexend;
