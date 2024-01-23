@@ -36,6 +36,10 @@ p{
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.159);
   transition: transform .15s;
   overflow: hidden;
+  border-width: 3px;
+  border-color: black;
+  border-style: dashed;
+  transition: border-width 1s;
 }
 .project-cards-text{
   background-color: rgba(0, 0, 0, 0.786);
@@ -55,6 +59,7 @@ p{
 }
 .project-cards:hover{
   transform: scale(1.1);
+  border-width: 1px;
 }
 .project-cards:nth-child(1){
   background-image: url("Images/robot.png");
@@ -137,4 +142,10 @@ p{
   height: 500px;
   left: 76%;
   top: 57%;
+}
+#linkedIn{
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
 }
